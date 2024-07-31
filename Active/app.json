@@ -16,12 +16,11 @@
       "supportsTablet": true
     },
     "android": {
-      "package": "com.yourcompany.yourappname",
+      "package": "com.Techwise.Active",
       "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
     },
     "web": {
       "bundler": "metro",
@@ -39,7 +38,7 @@
         "origin": false
       },
       "eas": {
-        "projectId": "3ebab07d-b6c4-4d92-ba0f-6d4166fccce1"
+        "projectId": "855460c8-316f-4af8-ad01-babebb6f494b"
       }
     }
   }
