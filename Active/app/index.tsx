@@ -1,3 +1,4 @@
+import { Link } from "@react-navigation/native";  
 import * as React from "react";
 import { Text, View, StyleSheet } from "react-native";
 
@@ -47,6 +48,7 @@ export default function Index() {
   console.log("App executed!");
   return (
     <View style={styles.container}>
+      <Link to="/home" style ={{color: 'blue'}}>Go to home</Link>
       <Rectangle />
       <Profile />
     </View>
@@ -62,7 +64,7 @@ const styles = StyleSheet.create({
   profileSettings: {
     fontSize: 32,
     fontWeight: "500",
-    fontFamily: "Kanit-Medium",
+    fontFamily: "Arial",
     color: "#000",
     textAlign: "center",
     width: 220,
@@ -74,7 +76,7 @@ const styles = StyleSheet.create({
   editInfo: {
     fontSize: 27,
     fontWeight: "500",
-    fontFamily: "Kanit-Medium",
+    fontFamily: "Arial",
     color: "#000",
     textAlign: "center",
     width: 102,
@@ -92,7 +94,7 @@ const styles = StyleSheet.create({
     fontSize: 32,
     textAlign: "center",
     color: "#000",
-    fontFamily: "Kanit-Medium",
+    fontFamily: "Arial",
     fontWeight: "500",
   },
   iconPosition: {
