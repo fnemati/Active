@@ -1,6 +1,7 @@
 import { Link } from "@react-navigation/native";  
 import * as React from "react";
 import { Text, View, StyleSheet } from "react-native";
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const ProfileSettingsText = () => {
   return <Text style={styles.profileSettings}>Profile Settings</Text>;
@@ -17,7 +18,7 @@ const Rectangle = () => {
 const Profile = () => {
   return (
     <View style={styles.profile}>
-      <View style={styles.profileicon1} />
+      <Icon name="user-circle" style={styles.profileIcon} />
       <View style={[styles.profileChild, styles.profileLayout]} />
       <Text style={[styles.personalRecords, styles.profileTypo]}>Personal Records</Text>
       <View style={[styles.profileItem, styles.profileLayout]} />
@@ -27,19 +28,15 @@ const Profile = () => {
       <View style={styles.profileChild2} />
       <Text style={[styles.editAvatar, styles.profileTypo]}>Edit Avatar</Text>
       <Text style={[styles.workoutHeatmap, styles.profileTypo]}>Workout Heatmap</Text>
-      <View style={[styles.icon, styles.iconLayout1]} />
-      <View style={[styles.icon1, styles.icon1Position]} />
-      <View style={[styles.calendar2492Icon, styles.iconLayout]} />
-      <View style={[styles.icon2, styles.iconLayout]} />
-      <View style={[styles.groupIcon, styles.iconPosition]} />
+      <Icon name="heartbeat" style={[styles.icon, styles.iconLayout1]} />
+      <Icon name="calendar" style={[styles.calendarIcon, styles.iconLayout]} />
+      <Icon name="gear" style={[styles.icon2, styles.iconLayout]} />
+      <Icon name="users" style={[styles.groupIcon, styles.iconPosition]} />
       <Text style={[styles.profile1, styles.profileTypo]}>Profile</Text>
-      <View style={styles.gearIconPng122} />
+      <Icon name="cog" style={styles.gearIcon} />
       <ProfileSettingsText />
       <EditInfoText />
-      <View style={styles.removeBackgroundProject1} />
-      <View style={styles.prInpixio1Icon} />
-      <View style={styles.imageedit241630972211Icon} />
-      <View style={styles.rectangleView} />
+      <Rectangle />
     </View>
   );
 };
@@ -48,7 +45,7 @@ export default function Index() {
   console.log("App executed!");
   return (
     <View style={styles.container}>
-      <Link to="/home" style ={{color: 'blue'}}>Go to home</Link>
+      <Link to="/home" style={{ color: 'blue' }}>Go to home</Link>
       <Rectangle />
       <Profile />
     </View>
@@ -72,6 +69,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: 150,
     left: 112,
+    zIndex: 10, // Ensure text is on top
   },
   editInfo: {
     fontSize: 27,
@@ -84,6 +82,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: 205,
     left: 112,
+    zIndex: 10, // Ensure text is on top
   },
   profileLayout: {
     height: 2,
@@ -111,28 +110,23 @@ const styles = StyleSheet.create({
     height: 60,
     width: 60,
   },
-  icon1Position: {
-    left: 112,
-    position: "absolute",
-  },
   iconLayout: {
     height: 61,
     position: "absolute",
   },
-  profileicon1: {
+  profileIcon: {
     top: 143,
     left: 31,
-    width: 62,
-    height: 62,
+    fontSize: 62,
+    color: "#000", // Ensure the icon is visible
     position: "absolute",
-    backgroundColor: "#ccc", // Placeholder for image
   },
   profileChild: {
     top: 637,
     left: 0,
     height: 2,
     position: "absolute",
-    backgroundColor: "#ccc", // Placeholder for line
+    backgroundColor: "#ccc",
   },
   personalRecords: {
     top: 555,
@@ -140,27 +134,28 @@ const styles = StyleSheet.create({
     left: 115,
     fontSize: 32,
     position: "absolute",
+    zIndex: 10, // Ensure text is on top
   },
   profileItem: {
     top: 519,
     left: 0,
     height: 2,
     position: "absolute",
-    backgroundColor: "#ccc", // Placeholder for line
+    backgroundColor: "#ccc",
   },
   profileInner: {
     top: 283,
     height: 2,
     width: 393,
-    backgroundColor: "#ccc", // Placeholder for line
+    backgroundColor: "#ccc",
   },
   lineIcon: {
     top: 132,
-    backgroundColor: "#ccc", // Placeholder for line
+    backgroundColor: "#ccc",
   },
   profileChild1: {
     top: 742,
-    backgroundColor: "#ccc", // Placeholder for line
+    backgroundColor: "#ccc",
   },
   profileChild2: {
     top: 402,
@@ -168,7 +163,7 @@ const styles = StyleSheet.create({
     maxHeight: "100%",
     width: 417,
     position: "absolute",
-    backgroundColor: "#ccc", // Placeholder for line
+    backgroundColor: "#ccc",
   },
   editAvatar: {
     top: 312,
@@ -176,6 +171,7 @@ const styles = StyleSheet.create({
     left: 115,
     fontSize: 32,
     position: "absolute",
+    zIndex: 10, // Ensure text is on top
   },
   workoutHeatmap: {
     top: 437,
@@ -183,74 +179,53 @@ const styles = StyleSheet.create({
     left: 115,
     fontSize: 32,
     position: "absolute",
+    zIndex: 10, // Ensure text is on top
   },
   icon: {
     top: 765,
     left: 12,
+    fontSize: 60,
+    color: "#000", // Ensure the icon is visible
     position: "absolute",
-    backgroundColor: "#ccc", // Placeholder for icon
   },
-  icon1: {
-    top: 764,
-    height: 60,
-    width: 60,
-    backgroundColor: "#ccc", // Placeholder for icon
-  },
-  calendar2492Icon: {
+  calendarIcon: {
     top: 763,
     left: 205,
-    width: 65,
-    backgroundColor: "#ccc", // Placeholder for icon
+    fontSize: 65,
+    color: "#000", // Ensure the icon is visible
+    position: "absolute",
   },
   icon2: {
     left: 304,
     width: 61,
     top: 764,
-    backgroundColor: "#ccc", // Placeholder for icon
+    fontSize: 61,
+    color: "#000", // Ensure the icon is visible
+    position: "absolute",
   },
   groupIcon: {
     top: 13,
     width: 52,
     height: 53,
-    backgroundColor: "#ccc", // Placeholder for icon
+    fontSize: 53,
+    color: "#000", // Ensure the icon is visible
+    position: "absolute",
   },
   profile1: {
     top: 75,
     left: 144,
     width: 94,
     position: "absolute",
+    zIndex: 10, // Ensure text is on top
   },
-  gearIconPng122: {
+  gearIcon: {
     top: 12,
     left: 313,
     width: 63,
     height: 63,
+    fontSize: 63,
+    color: "#000", // Ensure the icon is visible
     position: "absolute",
-    backgroundColor: "#ccc", // Placeholder for icon
-  },
-  removeBackgroundProject1: {
-    top: 301,
-    left: 27,
-    width: 70,
-    height: 70,
-    position: "absolute",
-    backgroundColor: "#ccc", // Placeholder for icon
-  },
-  prInpixio1Icon: {
-    top: 546,
-    left: 39,
-    width: 45,
-    height: 65,
-    position: "absolute",
-    backgroundColor: "#ccc", // Placeholder for icon
-  },
-  imageedit241630972211Icon: {
-    top: 422,
-    left: 23,
-    width: 75,
-    height: 75,
-    position: "absolute",
-    backgroundColor: "#ccc", // Placeholder for icon
   },
   rectangleView: {
     backgroundColor: "#e7e4e4",
