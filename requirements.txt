@@ -1,2 +1,3 @@
 matplotlib
 pandas
+react-native-caldendars - make sure to check-in (npm ci) so that dependencies are the same
