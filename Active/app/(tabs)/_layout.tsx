@@ -13,7 +13,7 @@ const TabsLayout = () => {
           tabBarIcon: ({size, focused, color}) => {
             return (
               <Image
-                style={{width:45,height:45}}
+                style={{width:40,height:40}}
                 source={require('../../assets/images/home.png')}
                 
               />
@@ -25,7 +25,7 @@ const TabsLayout = () => {
             tabBarIcon: ({size, focused, color}) => {
               return (
                 <Image
-                  style={{width:45,height:45}}
+                  style={{width:40,height:40}}
                   source={require('../../assets/images/goalpost.png')}
                   
                 />
@@ -36,7 +36,7 @@ const TabsLayout = () => {
             tabBarIcon: ({size, focused, color}) => {
               return (
                 <Image
-                  style={{width:45,height:45}}
+                  style={{width:40,height:40}}
                   source={require('../../assets/images/calendar.png')}
                   
                 />

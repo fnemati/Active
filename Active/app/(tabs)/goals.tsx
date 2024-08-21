@@ -3,9 +3,12 @@ import React from 'react'
 
 const goals = () => {
   return (
-    <View style={styles.container}>
-      <Text>goals</Text>
-    </View>
+    <>
+      <View style={styles.container}>
+        <Text>goals</Text>
+      </View>
+      
+    </>
   )
 }
 
