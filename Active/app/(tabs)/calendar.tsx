@@ -1,19 +1,30 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity, SafeAreaView } from 'react-native'
 import React, {useState} from 'react'
-import { Calendar, CalendarList, Agenda, LocaleConfig } from 'react-native-calendars' 
+import { Calendar, Agenda } from 'react-native-calendars' 
 
 
 
 const calendar = () => {
-  const [selected, setSelected] = useState('')
-  const workout = {key: 'workout', color: 'red', selectedDotColor: 'red'} // inputted just for show 
-  const restDay = {key: 'rest', color: 'green', selectedDotColor: 'green'}
+  // const [selected, setSelected] = useState('')
+  // const workout = {key: 'workout', color: 'red', selectedDotColor: 'red'} // inputted just for show 
+  // const restDay = {key: 'rest', color: 'green', selectedDotColor: 'green'}
   return (
     <>
-      <View style={styles.container}>
-        <Text></Text>
-      </View>
-      <Calendar 
+      <SafeAreaView style={styles.container}>
+        <Agenda //decided to use Agenda for visual purposes
+          items={{
+            '2024-08-21': [{name:'TechWise Meeting', data: 'Meeting for week 6'}],
+            '2024-08-20': [{name:'Active Team Meet', data: 'Meeting to discuss and improve App'}]
+          }}
+          renderItem={(item, isFirst) =>(
+            <TouchableOpacity style={styles.item}>
+              <Text style={styles.container}>{item.name}</Text>
+              <Text style={styles.container}>{item.data}</Text>
+            </TouchableOpacity>
+          )}
+        /> 
+      </SafeAreaView>
+      {/* <Calendar 
         onDayPress={day => {
           setSelected(day.dateString);
         }}
@@ -27,7 +38,7 @@ const calendar = () => {
         markedDates={{
           '2024-08-21': {dots: [restDay,workout], selected: true, selectedColor: 'red'}
         }}
-      />
+      /> */}
       
     </>
   )
@@ -38,7 +49,14 @@ export default calendar
 const styles = StyleSheet.create({
   container:{
     flex: 1, 
-    justifyContent: 'center',
-    alignItems: 'center'
+  },
+  item:{
+    backgroundColor:'lightblue',
+    flex:1,
+    borderRadius:5,
+    padding:10,
+    marginRight:10,
+    marginTop: 25,
+    paddingBottom:20
   }
 })
