@@ -15,39 +15,39 @@ const Rectangle = () => {
   return <View style={styles.rectangleView} />;
 };
 
-const Profile = () => {
-  return (
-    <View style={styles.profile}>
-      <Icon name="user-circle" style={styles.profileIcon} />
-      <View style={[styles.profileChild, styles.profileLayout]} />
-      <Text style={[styles.personalRecords, styles.profileTypo]}>Personal Records</Text>
-      <View style={[styles.profileItem, styles.profileLayout]} />
-      <View style={[styles.profileInner, styles.iconPosition]} />
-      <View style={[styles.lineIcon, styles.lineIconPosition]} />
-      <View style={[styles.profileChild1, styles.lineIconPosition]} />
-      <View style={styles.profileChild2} />
-      <Text style={[styles.editAvatar, styles.profileTypo]}>Edit Avatar</Text>
-      <Text style={[styles.workoutHeatmap, styles.profileTypo]}>Workout Heatmap</Text>
-      <Icon name="heartbeat" style={[styles.icon, styles.iconLayout1]} />
-      <Icon name="calendar" style={[styles.calendarIcon, styles.iconLayout]} />
-      <Icon name="gear" style={[styles.icon2, styles.iconLayout]} />
-      <Icon name="users" style={[styles.groupIcon, styles.iconPosition]} />
-      <Text style={[styles.profile1, styles.profileTypo]}>Profile</Text>
-      <Icon name="cog" style={styles.gearIcon} />
-      <ProfileSettingsText />
-      <EditInfoText />
-      <Rectangle />
-    </View>
-  );
-};
+// const Profile = () => {
+//   return (
+//     <View style={styles.profile}>
+//       <Icon name="user-circle" style={styles.profileIcon} />
+//       <View style={[styles.profileChild, styles.profileLayout]} />
+//       <Text style={[styles.personalRecords, styles.profileTypo]}>Personal Records</Text>
+//       <View style={[styles.profileItem, styles.profileLayout]} />
+//       <View style={[styles.profileInner, styles.iconPosition]} />
+//       <View style={[styles.lineIcon, styles.lineIconPosition]} />
+//       <View style={[styles.profileChild1, styles.lineIconPosition]} />
+//       <View style={styles.profileChild2} />
+//       <Text style={[styles.editAvatar, styles.profileTypo]}>Edit Avatar</Text>
+//       <Text style={[styles.workoutHeatmap, styles.profileTypo]}>Workout Heatmap</Text>
+//       <Icon name="heartbeat" style={[styles.icon, styles.iconLayout1]} />
+//       <Icon name="calendar" style={[styles.calendarIcon, styles.iconLayout]} />
+//       <Icon name="gear" style={[styles.icon2, styles.iconLayout]} />
+//       <Icon name="users" style={[styles.groupIcon, styles.iconPosition]} />
+//       <Text style={[styles.profile1, styles.profileTypo]}>Profile</Text>
+//       <Icon name="cog" style={styles.gearIcon} />
+//       <ProfileSettingsText />
+//       <EditInfoText />
+//       <Rectangle />
+//     </View>
+//   );
+// };
 
 export default function Index() {
   console.log("App executed!");
   return (
     <View style={styles.container}>
       <Link to="/home" style={{ color: 'blue' }}>Go to home</Link>
-      <Rectangle />
-      <Profile />
+      {/* <Rectangle /> */}
+      {/* <Profile /> */}
     </View>
   );
 }
