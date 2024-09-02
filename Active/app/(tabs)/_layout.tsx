@@ -43,7 +43,17 @@ const TabsLayout = () => {
               )
             }
           }}/>
-          
+          <Tabs.Screen name="profile" options={{title: "Profile",
+            tabBarIcon: ({size, focused, color}) => {
+              return (
+                <Image
+                  style={{width:40,height:40}}
+                  source={require('../../assets/images/profileicon1.png')}
+                  
+                />
+              )
+            }
+          }}/>
         </Tabs>
     </>
   )
