@@ -5,6 +5,7 @@ import { Text, View, StyleSheet } from "react-native";
 
 
 export default function Index() {
+  
   console.log("App executed!");
   return (
     <View style={styles.container}>

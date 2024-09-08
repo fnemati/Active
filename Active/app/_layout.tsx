@@ -2,7 +2,7 @@ import { Stack } from "expo-router";
 
 export default function RootLayout() {
   return (
-    <Stack>
+    <Stack> 
       <Stack.Screen name="hello world" />
     </Stack>
   );

@@ -126,6 +126,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignSelf: "center",
     marginTop: 8,
+    width: 250,
   },
   statsBox: {
     alignItems: "center",
