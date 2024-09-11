@@ -11,10 +11,9 @@ const goals = () => {
         <View style={styles.container}>
           <Text style={styles.subtitle}>September {"\n"} Workout Goals {"\n"} Nutrition Goals</Text>
           <Image source={require('../../assets/images/bargraph.png')} style={styles.graph} resizeMode="center"></Image>
-          <Text style={styles.graphtext}> Exercises Done | Goals </Text>
           <View style = {styles.goalscontainer}>
-            <View style = {styles.tinyboxblue}> </View>
-            <View style = {styles.tinyboxorange}> </View>
+            <Text style = {styles.tinyboxblue}> Exercises Done </Text>
+            <Text style = {styles.tinyboxorange}> Goals </Text>
           </View>
         </View >
       </View>
@@ -92,19 +91,25 @@ const styles = StyleSheet.create({
     fontWeight: '300'
   },
   tinyboxblue: {
-    width: 10,
+    width: 60,
     height: 10,
     borderWidth: 1,
     borderColor: '#918a74',
     borderRadius: 7,
-    backgroundColor: '#b3e1e8'
+    backgroundColor: '#b3e1e8',
+    fontSize: 7,
+    fontWeight: '300',
+    textAlign: 'center',
   },
   tinyboxorange: {
-    width: 10,
+    width: 60,
     height: 10,
     borderWidth: 1,
     borderColor: '#918a74',
     borderRadius: 7,
-    backgroundColor: '#e7b250'
+    backgroundColor: '#e7b250',
+    fontSize: 7,
+    fontWeight: '300',
+    textAlign: 'center',
   }
 })
