@@ -1,26 +1,45 @@
 import { Link } from "@react-navigation/native";  
 import * as React from "react";
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet, ImageBackground } from "react-native";
 
 
 
 export default function Index() {
-  
   console.log("App executed!");
+  
   return (
-    <View style={styles.container}>
-      <Link to="/home" style={{ color: 'blue' }}>Go to home</Link>
+    <ImageBackground 
+      source={{ uri: 'https://img.freepik.com/free-photo/dumbbells-multicolored-background_23-2147735032.jpg' }}
+      style={styles.background}
+    >
+      <Link to="/home" style={styles.linkText}>
+        <Text style={styles.text}>Go to home</Text>
+      </Link>
       {/* <Rectangle /> */}
       {/* <Profile /> */}
-    </View>
+    </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  background: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%',
+    height: '100%',
+  },
+  linkText: {
+    textDecorationLine: 'none', // Remove underline
+  },
+  text: {
+    fontSize: 24, // Increase font size
+    fontWeight: 'bold', // Make text bold
+    color: 'white', // Set the text color to white or another suitable color
+    textAlign: 'center', // Center-align the text
+    padding: 10, // Add padding around the text
+    backgroundColor: 'rgba(0, 0, 0, 0.5)', // Semi-transparent background for contrast
+    borderRadius: 5, // Round the edges
   },
 });
 // ALL UNUSED CODE FOR PROFILE BELOW (tbh we can delete it)
