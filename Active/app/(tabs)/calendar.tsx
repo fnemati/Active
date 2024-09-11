@@ -1,44 +1,55 @@
-import { StyleSheet, Text, TouchableOpacity, SafeAreaView } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity, SafeAreaView, Pressable, Alert } from 'react-native'
 import React, {useState} from 'react'
-import { Calendar, Agenda } from 'react-native-calendars' 
+import {  Agenda, AgendaEntry } from 'react-native-calendars' 
 
 
 
-const calendar = () => {
-  // const [selected, setSelected] = useState('')
-  // const workout = {key: 'workout', color: 'red', selectedDotColor: 'red'} // inputted just for show 
-  // const restDay = {key: 'rest', color: 'green', selectedDotColor: 'green'}
+const calendar: React.FC = () => {
+  
+  const renderItem = (schedule: AgendaEntry, isFirst: boolean) => {
+    const fontSize = isFirst ? 16 : 14;
+    const color = isFirst ? "black" : "#43515c"
+
+    return (
+      <Pressable
+        style={[styles.item, { height: schedule.height}]}
+        onPress={() => Alert.alert(schedule.name)}
+        >
+          <Text style={{fontSize, color}}>{schedule.name}</Text>
+      </Pressable>
+    )
+    
+    
+  }
+
+  const renderEmptyDate = () => {
+    return (
+      <SafeAreaView style ={styles.emptyDate}>
+        <Text>This is an empty date</Text>
+      </SafeAreaView>
+    )
+  }
+
+
   return (
     <>
       <SafeAreaView style={styles.container}>
-        <Agenda //decided to use Agenda for visual purposes
+        <Agenda 
           items={{
-            '2024-08-21': [{name:'TechWise Meeting', data: 'Meeting for week 6'}],
-            '2024-08-20': [{name:'Active Team Meet', data: 'Meeting to discuss and improve App'}]
+            '2024-09-09': [],
+            '2024-09-10': [{name :'Gym: core workout '}],
+            '2024-09-11': [{id: '1', name:'TechWise Meeting'},{id: '2', name: 'Class Meet'}],
+            '2024-09-12': [{name:'Gym: leg workout', id: '1'},{id: '2', name: 'Important meeting'}]
+            
           }}
-          renderItem={(item, isFirst) =>(
-            <TouchableOpacity style={styles.item}>
-              <Text style={styles.container}>{item.name}</Text>
-              <Text style={styles.container}>{item.data}</Text>
-            </TouchableOpacity>
-          )}
+          renderItem={renderItem} 
+          renderEmptyDate={renderEmptyDate}
+          selected="2024-09-11"
+          showOnlySelectedDayItems
+         
         /> 
       </SafeAreaView>
-      {/* <Calendar 
-        onDayPress={day => {
-          setSelected(day.dateString);
-        }}
-        // change style however you see fit
-        style={{
-          borderWidth: 2,
-          borderColor: 'gray',
-          height: 400
-        }}
-        markingType={'multi-dot'}
-        markedDates={{
-          '2024-08-21': {dots: [restDay,workout], selected: true, selectedColor: 'red'}
-        }}
-      /> */}
+
       
     </>
   )
@@ -56,7 +67,12 @@ const styles = StyleSheet.create({
     borderRadius:5,
     padding:10,
     marginRight:10,
-    marginTop: 25,
+    marginTop: 17,
     paddingBottom:20
+  },
+  emptyDate: {
+    height: 15,
+    flex: 1,
+    paddingTop: 30
   }
 })
