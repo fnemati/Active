@@ -7,7 +7,6 @@ const goals = () => {
       <View style={styles.container}>
         <Text style={styles.title}>Your Monthly Goals</Text>
       </View>
-      <View style={styles.goalscontainer}>
         <View style={styles.container}>
           <Text style={styles.subtitle}>September {"\n"} Workout Goals {"\n"} Nutrition Goals</Text>
           <Image source={require('../../assets/images/bargraph.png')} style={styles.graph} resizeMode="center"></Image>
@@ -16,7 +15,6 @@ const goals = () => {
             <Text style = {styles.tinyboxorange}> Goals </Text>
           </View>
         </View >
-      </View>
       <View style={styles.container}>
         <Text style={styles.list}> Your Goals List </Text>
       </View>
@@ -48,7 +46,7 @@ const styles = StyleSheet.create({
   },
   subtitle: {
     paddingVertical: 25,
-    paddingHorizontal: 35,
+    paddingHorizontal: 30,
     borderWidth: 1,
     borderColor: '#918a74',
     borderRadius: 7,
@@ -77,9 +75,9 @@ const styles = StyleSheet.create({
   },
   graph: {
     flex: 1,
-    width: 150,
-    height: 150,
-    paddingVertical: 5,
+    width: 170,
+    height: 170,
+    paddingVertical: 60,
     paddingHorizontal: 5,
     borderWidth: 1,
     borderColor: '#918a74',
