@@ -9,7 +9,7 @@ const TabsLayout = () => {
   return (
     <>
         <Tabs >
-          <Tabs.Screen name="home" options={{title:"Home",
+          {/* <Tabs.Screen name="home" options={{title:"Home",
           tabBarIcon: ({size, focused, color}) => {
             return (
               <Image
@@ -20,7 +20,7 @@ const TabsLayout = () => {
             )
           }
 
-          }}/>
+          }}/> */}
           <Tabs.Screen name="goals" options={{title:"Goals",
             tabBarIcon: ({size, focused, color}) => {
               return (

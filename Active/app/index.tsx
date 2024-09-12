@@ -12,8 +12,8 @@ export default function Index() {
       source={{ uri: 'https://img.freepik.com/free-photo/dumbbells-multicolored-background_23-2147735032.jpg' }}
       style={styles.background}
     >
-      <Link to="/home" style={styles.linkText}>
-        <Text style={styles.text}>Go to home</Text>
+      <Link to="/profile" style={styles.linkText}>
+        <Text style={styles.text}>ACTIVE</Text>
       </Link>
       {/* <Rectangle /> */}
       {/* <Profile /> */}
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     textDecorationLine: 'none', // Remove underline
   },
   text: {
-    fontSize: 24, // Increase font size
+    fontSize: 100, // Increase font size
     fontWeight: 'bold', // Make text bold
     color: 'white', // Set the text color to white or another suitable color
     textAlign: 'center', // Center-align the text
